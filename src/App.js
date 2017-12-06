@@ -5,6 +5,7 @@ import './App.css'
 
 import Card from './Card'
 import GuessCount from './GuessCount'
+import HallOfFame, { FAKE_HOF } from './HallOfFame'
 
 const SIDE = 6
 const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
@@ -32,17 +33,15 @@ class App extends Component {
     return (
       <div className="memory">
         <GuessCount guesses={0} />
-        <Card card="😀" feedback="hidden" onClick={this.handleCardClick} />
-        <Card card="🎉" feedback="justMatched" onClick={this.handleCardClick} />
-        <Card
-          card="💖"
-          feedback="justMismatched"
-          onClick={this.handleCardClick}
-        />
-        <Card card="🎩" feedback="visible" onClick={this.handleCardClick} />
-        <Card card="🐶" feedback="hidden" onClick={this.handleCardClick} />
-        <Card card="🐱" feedback="justMatched" onClick={this.handleCardClick} />
-        {won && <p>GAGNÉ !</p>}
+        {this.cards.map((card, index) => (
+          <Card
+            card={card}
+            feedback="visible"
+            key={index}
+            onClick={this.handleCardClick}
+          />
+        ))}
+        {won && <HallOfFame entries={FAKE_HOF} />}
       </div>
     )
   }
