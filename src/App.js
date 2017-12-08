@@ -9,7 +9,7 @@ import HallOfFame, { FAKE_HOF } from './HallOfFame'
 import HighScoreInput from './HighScoreInput'
 
 const SIDE = 6
-const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
+export const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
 const VISUAL_PAUSE_MSECS = 750
 
 class App extends Component {

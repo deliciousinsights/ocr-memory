@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card/> should match its reference snapshot 1`] = `
+<div
+  className="card hidden"
+  onClick={[Function]}
+>
+  <span
+    className="symbol"
+  >
+    ❓
+  </span>
+</div>
+`;
