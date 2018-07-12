@@ -1,0 +1,28 @@
+.memory > .card {
+  font-size: 2em;
+  flex: 1 1 calc(100% / 6 - 0.4em);
+  outline: 0.08em solid silver;
+  margin: 0.2em;
+  display: flex;
+  cursor: default;
+}
+
+.memory > .card.hidden {
+  background: silver;
+}
+
+.memory > .card.justMatched,
+.memory > .card.justMismatched {
+  outline: 0.1em solid green;
+}
+.memory > .card.justMismatched {
+  outline-color: red;
+}
+
+.memory > .card.visible {
+  cursor: not-allowed;
+}
+
+.memory > .card > .symbol {
+  margin: auto;
+}
